@@ -12,7 +12,6 @@ import Artwork from './pages/Artwork'
 
 // main application
 function App() {
-  console.log(window.location.pathname)
   let Component
   switch (window.location.pathname) {
     case '/':
@@ -28,7 +27,9 @@ function App() {
   return (
     <>
       <NavBar />
+      <div className='container'>
         <Component />
+      </div>
       <Footer />
     </>
   )
