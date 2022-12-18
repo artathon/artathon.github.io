@@ -5,7 +5,7 @@ import JudgeInfo from "../components/JudgeInfo"
 export default function Judges() {
     return (
         <div className="group-container">
-            <h1>Judges</h1>
+            <h1 className="section-header">Judges</h1>
             <div className="person-container">
                 {judgeData.map(judge => (
                     <JudgeInfo 

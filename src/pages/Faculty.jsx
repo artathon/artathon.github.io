@@ -5,7 +5,7 @@ import FacultyInfo from "../components/FacultyInfo"
 export default function Faculty() {
     return (
         <div className="group-container">
-            <h1>Faculty</h1>
+            <h1 className="section-header">Faculty</h1>
             <div className="person-container">
                 {facultyData.map(faculty => (
                     <FacultyInfo 

@@ -5,7 +5,7 @@ import DeveloperInfo from "../components/DeveloperInfo"
 export default function Developers() {
     return (
         <div className="group-container">
-            <h1>Developers</h1>
+            <h1 className="section-header">Developers</h1>
             <div className="person-container">
                 {devData.map(dev => (
                     <DeveloperInfo 

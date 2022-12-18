@@ -2,7 +2,8 @@ import React from "react"
 
 export default function FacultyInfo({ name, department, title, imgUrl, link }) {
     return (
-        <div>
+        
+        <div className="person">
             <div className="cont">
                 <a href={link} target='_blank'>
                     <img src={imgUrl}
@@ -11,9 +12,9 @@ export default function FacultyInfo({ name, department, title, imgUrl, link }) {
                     />
                 </a>
                 <div className="about">
-                    <h3 style={{fontSize: '23px'}}>{name}</h3>
+                    <h3 style={{fontSize: '20px'}}>{name}</h3>
                     <h3 style={{fontWeight: 'normal'}}>{department}</h3>  
-                    <p>{title}</p> 
+                    <p style={{fontSize: 'small'}}>{title}</p> 
                 </div>
             </div>
         </div>

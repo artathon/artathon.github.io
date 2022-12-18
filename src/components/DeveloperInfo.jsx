@@ -11,9 +11,9 @@ export default function DeveloperInfo({ name, degree, imgUrl, link, gradDate }) 
                     />
                 </a>
                 <div className="about">
-                    <h3 style={{fontSize: '23px'}}>{name}</h3>
+                    <h3 style={{fontSize: '20px'}}>{name}</h3>
                     <h3 style={{fontWeight: 'normal'}}>{degree}</h3>  
-                    <p>{gradDate}</p> 
+                    <p style={{fontSize: 'small'}}>{gradDate}</p> 
                 </div>
             </div>
         </div>

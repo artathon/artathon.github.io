@@ -7,10 +7,11 @@ export default function Footer() {
     return (
         <nav className="footer">
             <ul>
-                <CustomLink to='/developers' className='footer-text disable-select'>Developers</CustomLink>
                 <CustomLink to='/judges' className='footer-text disable-select'>Judges</CustomLink>
                 <CustomLink to='/faculty' className='footer-text disable-select'>Faculty</CustomLink>
+                <CustomLink to='/developers' className='footer-text disable-select'>Developers</CustomLink>
             </ul>
+
         </nav>
     )
 }
