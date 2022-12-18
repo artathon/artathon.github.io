@@ -6,6 +6,7 @@
 
 #root{
   padding: 0;
+  margin: 0;
 }
 
 :root{
@@ -25,21 +26,18 @@ body {
   min-width: 550px;
 }
 
-.container {
-  margin: 1rem;
-  text-align: center;
-}
-
 .nav {
   background-color: #3a5a40;
   color: white;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   padding: .0rem 0rem;
   font-family: "Open Sans", sans-serif;
   height: 60px;
   min-width: 500px;
+  width: 100%;
 }
 
 .container {
@@ -47,6 +45,8 @@ body {
   justify-content: center;
   justify-items: center;
   padding: 5px;
+  margin: 1rem;
+  text-align: center;
 }
 
 .footer {
@@ -57,15 +57,18 @@ body {
   align-items: stretch;
   padding: .0rem 0rem;
   font-family: "Open Sans", sans-serif;
-  flex-shrink: 0;
 }
 
-.site-title {
+.site-text {
   font-size: 2rem;
 }
 
-.link-title {
+.link-text {
   font-size: 1.3rem;
+}
+
+.footer-text {
+  font-size: .5rem;
 }
 
 .nav ul, .footer ul {
@@ -88,6 +91,18 @@ body {
 font-size: 1rem;
 }
 
+/*
+.underline {
+  padding: 0;
+  margin: 0;
+}
+
+.underline:hover {
+  border-bottom: 7px solid var(--ninergold);
+}
+*/
+
+/* Nav active highlighting */
 .nav li.active, .footer li.active {
   background-color: #344e41;
   pointer-events: none;
@@ -97,6 +112,16 @@ font-size: 1rem;
   background-color: #588157;
 }
 
+
+/* Footer active highlighting */
+.footer li.active, .footer li.active {
+  background-color: #344e41;
+  pointer-events: none;
+}
+
+.footer li:hover:not(.active), .footer li:hover:not(.active) {
+  background-color: #588157;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -119,4 +144,12 @@ font-size: 1rem;
   .container{
     justify-content: left;
   }
+}
+
+.disable-select {
+   user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
