@@ -1,5 +1,11 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+#root{
+  padding: 0;
 }
 
 :root{
@@ -14,9 +20,14 @@
 }
 
 body {
-  margin: 0;
-  background-color: #dad7cd;
+  background-color: #ccd2c6;
   color: #101820;
+  min-width: 550px;
+}
+
+.container {
+  margin: 1rem;
+  text-align: center;
 }
 
 .nav {
@@ -27,6 +38,15 @@ body {
   align-items: stretch;
   padding: .0rem 0rem;
   font-family: "Open Sans", sans-serif;
+  height: 60px;
+  min-width: 500px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 5px;
 }
 
 .footer {
@@ -37,6 +57,7 @@ body {
   align-items: stretch;
   padding: .0rem 0rem;
   font-family: "Open Sans", sans-serif;
+  flex-shrink: 0;
 }
 
 .site-title {
@@ -44,14 +65,15 @@ body {
 }
 
 .link-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .nav ul, .footer ul {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: flex;}
+  display: flex;
+}
 
 .nav a, .footer a {
   color: inherit;
@@ -62,10 +84,39 @@ body {
   padding: .25rem 1rem;
 }
 
-.nav li.active, .footer li.active {
-  background-color: #344e41;
+.footer a {
+font-size: 1rem;
 }
 
-.nav li:hover, .nav li:hover {
+.nav li.active, .footer li.active {
+  background-color: #344e41;
+  pointer-events: none;
+}
+
+.nav li:hover:not(.active), .nav li:hover:not(.active) {
   background-color: #588157;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .site-title {
+    font-size: 1rem;
+  }
+  
+  .link-title {
+    font-size: .7rem;
+  }
+
+  .nav {
+    justify-content: left;
+  }
+
+  .footer {
+    justify-content: left;
+  }
+  
+  .container{
+    justify-content: left;
+  }
 }

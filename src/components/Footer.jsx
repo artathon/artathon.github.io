@@ -6,9 +6,9 @@ function Footer() {
     return (
         <nav className="footer">
             <ul>
-                <li><a href='/' className="link-title">Home</a></li>
-                <li><a href='/about' className="link-title">About</a></li>
-                <li><a href='/artwork' className="link-title">Artwork</a></li>
+                <li><a href='/developers' className="link-title">Developers</a></li>
+                <li><a href='/judges' className="link-title">Judges</a></li>
+                <li><a href='/faculty' className="link-title">Faculty</a></li>
             </ul>
         </nav>
     )

@@ -1,18 +1,27 @@
-import React from "react"
+import React, { Children } from "react"
 import { NavLink } from "react-router-dom"
 import '../index.css' 
 
-function NavBar() {
+export default function NavBar() {
     return (
         <nav className="nav">
             <a href='/' className="site-title">SDS Artathon</a>
             <ul>
-                <li><a href='/' className="link-title">Home</a></li>
-                <li><a href='/about' className="link-title">About</a></li>
-                <li><a href='/artwork' className="link-title">Artwork</a></li>
+                <CustomLink href='/' className='link-title'>Home</CustomLink>
+                <CustomLink href='/artwork' className='link-title'>Artwork</CustomLink>
+                <CustomLink href='/about' className='link-title'>About</CustomLink>
             </ul>
         </nav>
     )
 }
 
-export default NavBar
+function CustomLink({href, children, ...props}) {
+    const path = window.location.pathname
+    return (
+        <li className={path === href ? 'active' : ''} >
+            <a href={href} {...props}>
+                {children}
+            </a>
+        </li>
+    )
+}
