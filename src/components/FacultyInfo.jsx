@@ -1,9 +1,9 @@
 import React from "react"
 
-export default function DeveloperInfo({ name, degree, imgUrl, link, gradDate }) {
+export default function FacultyInfo({ name, department, title, imgUrl, link }) {
     return (
-        <div className="person">
-            <div>
+        <div>
+            <div className="cont">
                 <a href={link} target='_blank'>
                     <img src={imgUrl}
                     alt={name}
@@ -12,8 +12,8 @@ export default function DeveloperInfo({ name, degree, imgUrl, link, gradDate }) 
                 </a>
                 <div className="about">
                     <h3 style={{fontSize: '23px'}}>{name}</h3>
-                    <h3 style={{fontWeight: 'normal'}}>{degree}</h3>  
-                    <p>{gradDate}</p> 
+                    <h3 style={{fontWeight: 'normal'}}>{department}</h3>  
+                    <p>{title}</p> 
                 </div>
             </div>
         </div>

@@ -123,7 +123,7 @@ font-size: 1rem;
   background-color: #588157;
 }
 
-.developers-container {
+.group-container {
   width:100%;
   display: flex; 
   flex-direction: column;
@@ -132,14 +132,15 @@ font-size: 1rem;
   padding: 0 50px;
 }
 
-.developer-picture {
+
+.picture {
   border-radius: 50%;
   border: 3px solid var(--charlottegreen);
   width: 200px;
 }
 
-.dev-container {
-  width:75%;
+.person-container {
+  width:100%;
   padding: 30px 0 0 0 ;
   display: flex;
   flex-direction: row;
@@ -148,13 +149,16 @@ font-size: 1rem;
   align-items: center;
 }
 
-.dev-container a {
+.person-container a {
   color: inherit;
   text-decoration: none;
 }
 
-.dev {
+.person {
+  width: 220px;
   padding: 0 20px 30px 20px;
+  overflow-wrap: break-word;
+  
 }
 
 .about {

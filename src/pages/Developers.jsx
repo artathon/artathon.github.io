@@ -4,9 +4,9 @@ import DeveloperInfo from "../components/DeveloperInfo"
 
 export default function Developers() {
     return (
-        <div className="developers-container">
+        <div className="group-container">
             <h1>Developers</h1>
-            <div className="dev-container">
+            <div className="person-container">
                 {devData.map(dev => (
                     <DeveloperInfo 
                         name={dev.name}
@@ -14,7 +14,6 @@ export default function Developers() {
                         gradDate={dev.gradDate}
                         imgUrl={dev.imgUrl}
                         link={dev.link}
-                        linkName={dev.linkName}
                     />
                 ))}  
             </div>
