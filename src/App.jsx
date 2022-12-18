@@ -28,7 +28,9 @@ function App() {
   return (
     <>
       <NavBar />
-      <Component />
+      <div className='container'>
+        <Component />
+      </div>
       <Footer />
     </>
   )
