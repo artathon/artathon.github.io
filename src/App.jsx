@@ -32,42 +32,6 @@ function App() {
     <Footer />
     </>
   )
-
-
-
-
-/*  let Component
-  switch (window.location.pathname) {
-    case '/':
-      Component = Home
-      break
-    case '/artwork':
-      Component = Artwork
-      break
-    case '/about':
-      Component = About
-      break    
-    case '/developers':
-      Component = Developers
-      break
-    case '/judges':
-      Component = Judges
-      break
-    case '/faculty':
-      Component = Faculty
-      break      
-  }
-
-  return (
-    <>
-      <NavBar />
-      <div className='container'>
-        <Component />
-      </div>
-      <Footer />
-    </>
-  )
-    */
 }
 
 export default App
