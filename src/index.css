@@ -69,13 +69,14 @@ main {
   display: flex;
   align-items: center;
   height: 5rem;
-  color: var(--jasper);
+  color: var(--pinegreen);
   text-decoration: none;
 }
 
-.nav-link svg {
-  min-width: 2rem;
-  margin: 0 1.5rem;
+.nav-link img {
+  filter: invert(73%) sepia(2%) saturate(5645%) hue-rotate(10deg) brightness(81%) contrast(87%);
+  min-width: 3rem;
+  margin: 0 1rem;
 }
 
 .link-text {
@@ -149,9 +150,14 @@ font-size: 1rem;
 }
 
 /* Navbar active highlighting */
-.navbar li.active, .footer li.active {
+.navbar li.active {
   background-color: #003322;
   pointer-events: none;
+  transition: 150ms ease;
+}
+
+.navbar li.active a{
+  color:var(--jasper);
   transition: 150ms ease;
 }
 
@@ -241,7 +247,7 @@ font-size: 1rem;
   }
 
   .navbar:hover {
-    width: 16rem;
+    width: 12rem;
   }
   
   .navbar:hover .link-text {

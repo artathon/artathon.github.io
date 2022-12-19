@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 
 // dynamic components
 import Home from './pages/Home'
-import About from './pages/About'
+import Information from './pages/Information'
 import Artwork from './pages/Artwork'
 import Developers from './pages/Developers'
 import Judges from './pages/Judges'
@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/artwork' element={<Artwork />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/information' element={<Information />} />
         <Route path='/developers' element={<Developers />} />
         <Route path='/judges' element={<Judges />} />
         <Route path='/faculty' element={<Faculty />} />
