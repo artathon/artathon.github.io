@@ -47,7 +47,7 @@ main {
 }
 
 .navbar {
-  position:absolute;
+  position: fixed;
   background: var(--charlottegreen);
   transition: 100ms ease;
 }
