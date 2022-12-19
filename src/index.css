@@ -254,6 +254,7 @@ font-size: 1rem;
   .main-container {
     padding-top: 5rem;
     width: 100vw;
+    padding-bottom: 2rem;
   }
 
   .footer {
