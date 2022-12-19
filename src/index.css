@@ -148,16 +148,12 @@ font-size: 1rem;
   transition: 150ms ease;
 }
 
-.navbar li:hover:not(.active) {
-  background-color: #006644;
-  transition: 150ms ease;
-}
-
 /* Navbar active highlighting */
 .navbar li.active {
   background-color: #003322;
   pointer-events: none;
   transition: 150ms ease;
+  -webkit-tap-highlight-color: #003322;
 }
 
 .navbar li.active a{
@@ -224,7 +220,7 @@ font-size: 1rem;
 
 
 /* Media queries */
-
+/* Phones */
 @media only screen and (max-width: 600px) {
   .navbar {
     bottom: 1;
@@ -260,10 +256,7 @@ font-size: 1rem;
   }
 }
 
-
-
-
-
+/* Computer */
 @media only screen and (min-width: 600px) {
   .navbar {
     width: 4em;
