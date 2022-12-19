@@ -6,10 +6,10 @@ import { Link, useMatch, useResolvedPath  } from "react-router-dom"
 export default function Footer() {
     return (
         <nav className="footer">
-            <ul>
-                <CustomLink to='/judges' className='footer-text disable-select'>Judges</CustomLink>
-                <CustomLink to='/faculty' className='footer-text disable-select'>Faculty</CustomLink>
-                <CustomLink to='/developers' className='footer-text disable-select'>Developers</CustomLink>
+            <ul className="footer-nav">
+                <CustomLink to='https://datascience.charlotte.edu/'>
+                    <span className="">School of Data Science Student Organization</span>
+                </CustomLink>
             </ul>
 
         </nav>
@@ -22,7 +22,7 @@ function CustomLink({to, children, ...props}) {
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
     return (
         <li className={isActive ? 'active' : ''} >
-            <Link to={to} {...props}>
+            <Link to={`${to}`} {...props} className='footer-link' target='_blank'>
                 {children}
             </Link>
         </li>

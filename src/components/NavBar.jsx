@@ -7,12 +7,28 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 export default function NavBar() {
     return (
-        <nav className="nav">
-            <Link to='/' className="site-text">SDS Artathon</Link>
-            <ul>
-                <CustomLink to='/' className='link-text disable-select'>Home</CustomLink>
-                <CustomLink to='/artwork' className='link-text disable-select'>Artwork</CustomLink>
-                <CustomLink to='/about' className='link-text disable-select'>About</CustomLink>
+        <nav className="navbar">
+            <ul class='navbar-nav'>
+                <Link to='/' className="site-logo">SDS</Link>
+
+                <CustomLink to='/'>
+                    <span className='link-text'>Home</span>
+                </CustomLink>
+                <CustomLink to='/artwork'>
+                    <span className='link-text'>Artwork</span>
+                </CustomLink>
+                <CustomLink to='/about'>
+                    <span className='link-text'>About</span>
+                </CustomLink>
+                <CustomLink to='/judges'>
+                    <span className='link-text'>Judges</span>
+                </CustomLink>
+                <CustomLink to='/faculty'>
+                    <span className='link-text'>Faculty</span>
+                </CustomLink>
+                <CustomLink to='/developers'>
+                    <span className='link-text'>Developers</span>
+                </CustomLink>
             </ul>
         </nav>
     )
@@ -22,8 +38,8 @@ function CustomLink({to, children, ...props}) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
     return (
-        <li className={isActive ? 'active' : ''} >
-            <Link to={to} {...props}>
+        <li className={`${isActive ? 'active' : ''} nav-item disable-select`} >
+            <Link to={`${to}`} {...props} className='nav-link'>
                 {children}
             </Link>
         </li>
