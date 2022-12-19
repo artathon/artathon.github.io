@@ -73,9 +73,8 @@ main {
   text-decoration: none;
 }
 
-.nav-link img {
+.icon {
   filter: invert(73%) sepia(2%) saturate(5645%) hue-rotate(10deg) brightness(81%) contrast(87%);
-  min-width: 3rem;
   margin: 0 1rem;
 }
 
@@ -84,24 +83,13 @@ main {
   margin-left: 1rem;
 }
 
-.fa-primary {
-  color: #ff7eee;
-}
-
-.fa-secondary {
-  color: #df49a6;
-}
-
-.fa-primary, .fa-secondary {
-  transition: 200ms ease;
-}
-
 .main-container {
   width: 100vw;
 }
 
 .footer {
   position: fixed;
+  bottom:0;
   background-color: var(--charlottegreen);
   color: white;
   display: flex;
@@ -113,12 +101,17 @@ main {
 }
 
 .site-logo {
+  height: 4rem;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.3ch;
   margin-bottom: 1rem;
   color: var(--quartzwhite)
+}
+
+.site-logo-text {
+  display: none;
 }
 
 .logo svg {
@@ -161,10 +154,28 @@ font-size: 1rem;
   transition: 150ms ease;
 }
 
-.navbar li:hover:not(.active), .navbar li:hover:not(.active) {
+.navbar li.active .icon {
+  filter: invert(96%) sepia(6%) saturate(1980%) hue-rotate(339deg) brightness(103%) contrast(89%);
+  margin: 0 1rem;
+  transition: 150ms ease;
+}
+
+.navbar li.active .site-logo-text {
+  margin: 0 1rem;
+  transition: 150ms ease;
+}
+
+/* Navbar hover highlighting */
+.navbar li:hover:not(.active) {
   background-color: #006644;
   transition: 150ms ease;
 }
+
+.navbar li:hover:not(.active) {
+  background-color: #006644;
+  transition: 150ms ease;
+}
+
 
 .section-header {
   background-color: transparent;
@@ -217,17 +228,18 @@ font-size: 1rem;
 
 @media only screen and (max-width: 600px) {
   .navbar {
-    bottom: 0;
+    bottom: 1;
     width: 100vw;
-    height: 5rem;
+    height: 4rem;
   }
 
-  .site-logo {
-    display: none;
+  .nav-link {
+    height: 4rem;
   }
 
   .navbar-nav {
     flex-direction: row;
+    align-items: start;
   }
 
   .nav-link {
@@ -237,11 +249,20 @@ font-size: 1rem;
   main {
     margin: 0;
   }
+
+  .main-container {
+    padding-top: 5rem;
+    width: 100vw;
+  }
+
+  .footer {
+    z-index: 10;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .navbar {
-    width: 5rem;
+    width: 4em;
     height: 100vh;
     top: 0;
   }
@@ -254,6 +275,16 @@ font-size: 1rem;
     display: inline;
     transition: opacity 200ms ease-in;
   }
+
+  .navbar:hover .icon {
+    filter: invert(73%) sepia(2%) saturate(5645%) hue-rotate(10deg) brightness(81%) contrast(87%);
+  }
+
+  .main-container {
+    padding-top: 3rem;
+    width: 100vw;
+  }
+
 }
 
 .disable-select {

@@ -9,29 +9,31 @@ export default function NavBar() {
     return (
         <nav className="navbar">
             <ul className='navbar-nav'>
-                <Link to='/' className="site-logo">SDS</Link>
+                <div className="site-logo">
+                    <Link className='site-logo-text' to='/'>SDS</Link>
+                </div>
                 <CustomLink to='/'>
-                    <img src="/svgs/home.svg"/>
+                    <img className='icon' src="/svgs/home.svg"/>
                     <span className='link-text'>Home</span>
                 </CustomLink>
                 <CustomLink to='/artwork'>
-                    <img src="/svgs/artwork.svg"/>
+                    <img className='icon' src="/svgs/artwork.svg"/>
                     <span className='link-text'>Artwork</span>
                 </CustomLink>
                 <CustomLink to='/information'>
-                    <img src="/svgs/info.svg"/>
+                    <img className='icon' src="/svgs/info.svg"/>
                     <span className='link-text'>Information</span>
                 </CustomLink>
                 <CustomLink to='/judges'>
-                    <img src="/svgs/judges.svg"/>
+                    <img className='icon' src="/svgs/judges.svg"/>
                     <span className='link-text'>Judges</span>
                 </CustomLink>
                 <CustomLink to='/faculty'>
-                    <img src="/svgs/faculty.svg"/>
+                    <img className='icon' src="/svgs/faculty.svg"/>
                     <span className='link-text'>Faculty</span>
                 </CustomLink>
                 <CustomLink to='/developers'>
-                    <img src="/svgs/devs.svg"/>
+                    <img className='icon' src="/svgs/devs.svg"/>
                     <span className='link-text'>Developers</span>
                 </CustomLink>
             </ul>
