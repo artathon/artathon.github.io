@@ -167,6 +167,12 @@ font-size: 1rem;
   transition: 150ms ease;
 }
 
+.navbar li .icon {
+  filter: invert(73%) sepia(2%) saturate(5645%) hue-rotate(10deg) brightness(81%) contrast(87%);
+  margin: 0 1rem;
+  transition: 150ms ease;
+}
+
 .navbar li.active .site-logo-text {
   margin: 0 1rem;
   transition: 150ms ease;
