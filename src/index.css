@@ -257,8 +257,13 @@ font-size: 1rem;
 
   .footer {
     z-index: 10;
+    padding-bottom: 1.2rem;
   }
 }
+
+
+
+
 
 @media only screen and (min-width: 600px) {
   .navbar {
