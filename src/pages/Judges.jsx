@@ -8,7 +8,7 @@ export default function Judges() {
             <h1 className="section-header">Judges</h1>
             <div className="person-container">
                 {judgeData.map(judge => (
-                    <JudgeInfo 
+                    <JudgeInfo key={judge.name}
                         name={judge.name}
                         department={judge.department}
                         title={judge.title}

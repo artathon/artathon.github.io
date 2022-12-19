@@ -8,7 +8,7 @@ export default function Developers() {
             <h1 className="section-header">Developers</h1>
             <div className="person-container">
                 {devData.map(dev => (
-                    <DeveloperInfo 
+                    <DeveloperInfo  key={dev.name}
                         name={dev.name}
                         degree={dev.degree}
                         gradDate={dev.gradDate}
