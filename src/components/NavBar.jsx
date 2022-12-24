@@ -12,27 +12,27 @@ export default function NavBar() {
                 <div className="site-logo">
                     <Link className='site-logo-text' to='/'>SDS</Link>
                 </div>
-                <CustomLink to='/' ontouchstart="">
+                <CustomLink to='/' onTouchStart="">
                     <img className='icon' src="/svgs/home.svg"/>
                     <span className='link-text'>Home</span>
                 </CustomLink>
-                <CustomLink to='/artwork' ontouchstart="">
+                <CustomLink to='/artwork' onTouchStart="">
                     <img className='icon' src="/svgs/artwork.svg"/>
                     <span className='link-text'>Artwork</span>
                 </CustomLink>
-                <CustomLink to='/information' ontouchstart="">
+                <CustomLink to='/information' onTouchStart="">
                     <img className='icon' src="/svgs/info.svg"/>
                     <span className='link-text'>Information</span>
                 </CustomLink>
-                <CustomLink to='/judges' ontouchstart="">
+                <CustomLink to='/judges' onTouchStart="">
                     <img className='icon' src="/svgs/judges.svg"/>
                     <span className='link-text'>Judges</span>
                 </CustomLink>
-                <CustomLink to='/faculty' ontouchstart="">
+                <CustomLink to='/faculty' onTouchStart="">
                     <img className='icon' src="/svgs/faculty.svg"/>
                     <span className='link-text'>Faculty</span>
                 </CustomLink>
-                <CustomLink to='/developers' ontouchstart="">
+                <CustomLink to='/developers' onTouchStart="">
                     <img className='icon' src="/svgs/devs.svg"/>
                     <span className='link-text'>Developers</span>
                 </CustomLink>

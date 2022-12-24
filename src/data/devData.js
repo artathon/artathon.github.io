@@ -12,12 +12,5 @@ export default [
         imgUrl: '/pruthvi.jpg',
         link: 'https://www.linkedin.com/in/pruthvi-raj-228816161/',
         gradDate: 'May 2024'
-    },
-    {
-        name: 'Tony DiCarlantonio',
-        degree: 'Data Science',
-        imgUrl: '/tony.jpg',
-        link: 'https://www.linkedin.com/in/tonyjosephd/',
-        gradDate: 'May 2023'
     }
 ]

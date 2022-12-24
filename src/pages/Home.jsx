@@ -1,11 +1,31 @@
+import React, {useState, useEffect} from "react"
+import ArtSubmission from "../components/ArtSubmission"
+import JudgePortal from "../components/JudgePortal"
+
 export default function Home() {
+
+const [active, setActive] = useState(false)
+
+
     return (
-        <>
-        <div>
-            <h1>Select whether artist or judge</h1>
-            <h3>If artist, they are asked to submit an image with additional information.</h3>
-            <h3>If judge, they are asked to login using Google Auth with their UNCC credintials.</h3>
+        <div className="user-selection-container">
+            <div className="user-selection">
+                <button onClick={()=>setActive(true)}
+                    className={`user-selection-btn ${active ? 'active' : ''}`} 
+                    >
+                    Judge
+                </button>
+                <button onClick={()=>setActive(false)}
+                    className={`user-selection-btn ${!active ? 'active' : ''}`} 
+                    type="button">
+                    Artist
+                </button>
+            </div>
+
+            <div className="portals">
+                    {active && <JudgePortal /> }
+                    {!active && <ArtSubmission />}
+            </div>
         </div>
-        </>
     )
 }
