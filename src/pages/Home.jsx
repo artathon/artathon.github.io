@@ -1,12 +1,10 @@
 import React, {useState, useEffect} from "react"
-import ArtSubmission from "../components/ArtSubmission"
+import SubmissionPortal from "../components/SubmissionPortal"
 import JudgePortal from "../components/JudgePortal"
 
 export default function Home() {
 
 const [active, setActive] = useState(false)
-
-
     return (
         <div className="user-selection-container">
             <div className="user-selection">
@@ -24,7 +22,7 @@ const [active, setActive] = useState(false)
 
             <div className="portals">
                     {active && <JudgePortal /> }
-                    {!active && <ArtSubmission />}
+                    {!active && <SubmissionPortal />}
             </div>
         </div>
     )
